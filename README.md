@@ -88,3 +88,33 @@ However the exploit included in this repo also includes the Windows 8/Server 201
 
 
 The original exploit code that this repo pulls from is located here: https://github.com/worawit/MS17-010
+
+## Targets:
+
+eternalblue_exploit7.py:
+```
+Windows Server 2008 & R2
+Windows Server 2012 & R2 (x86)
+Windows Server 2016 (x64)
+Windows Vista
+Windows 7
+```
+
+eternalblue_exploit8.py:
+```
+Windows Server 2012 (x64)
+Windows 8.1 & RT
+Windows 10 (x64) (build < 14393)
+```
+
+## Generate Shellcode (Manually):
+```
+```
+
+## Merging binaries:
+```
+python MS17-010/shellcode/eternalblue_sc_merge.py sc_x86.bin sc_x64.bin sc_all.bin
+```
+
+
+
