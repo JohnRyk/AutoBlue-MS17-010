@@ -107,6 +107,13 @@ Windows 8.1 & RT
 Windows 10 (x64) (build < 14393)
 ```
 
+eternalblue_exploit10.py:
+```
+Windows 2012 R2 x64
+Windows 8.1 x64
+Windows 10 Pro Build 10240 x64
+```
+
 ## Generate Shellcode (Manually):
 ```
 ```
