@@ -146,4 +146,17 @@ set LPORT xxx
 exploit -j
 ```
 
+## [[: not found (Error)
+
+If your got this issue:
+```
+./listener_prep.sh: 18: [[: not found
+./listener_prep.sh: 59: [[: not found
+```
+
+Change you shell to bash shell:
+
+```
+bash
+```
 
